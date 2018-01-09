@@ -1,0 +1,38 @@
+# reload with :source ~/.ideavimrc
+
+let mapleader = " "
+map <leader>a :action $SelectAll<CR>
+map <leader>b :action GotoDeclaration<CR>
+map <leader>c :action $Copy<CR>
+nnoremap <leader>c :action $Copy<cr>
+vnoremap <leader>c :<bs><bs><bs><bs><bs>action VimVisualSwapSelections<cr>:action $Copy<cr>
+map <leader>d :action EditorDuplicate<CR>
+
+nnoremap <leader>eem :action ExtractMethod<cr>
+vnoremap <leader>eem :<bs><bs><bs><bs><bs>action VimVisualSwapSelections<cr>:action ExtractMethod<cr>
+map <leader>er :action RenameElement<CR>
+map <leader>em :action Move<CR>
+
+map <leader>f :action Find<CR>
+map <leader>g :action GotoLine<CR>
+map <leader>ga :action GotoAction<CR>
+map <leader>gb :action GotoDeclaration<CR>
+map <leader>gt :action GotoTest<CR>
+map <leader>gu :action GotoSuperMethod<CR>
+map <leader>wh :action VimWindowLeft<CR>
+map <leader>wl :action VimWindowRight<CR>
+map <leader>n :action RecentFiles<CR>
+map <leader>o :action OverrideMethods<CR>
+map <leader>p :action ParameterInfo<CR>
+map <leader>q :action GuiDesigner.QuickJavadoc<CR>
+map <leader>r :action Replace<CR>
+map <leader>s :action SaveAll<CR>
+map <leader>t :action Vcs.UpdateProject<CR>
+map <leader>u :action GotoSuperMethod<CR>
+map <leader>v :action $Paste<CR>
+map <leader>x :action $Cut<CR>
+map <leader>y :action EditorDeleteLine<CR>
+map <leader>[ :action EditorCodeBlockStart<CR>
+map <leader>] :action EditorCodeBlockEnd<CR>
+map <leader>, :action Back<CR>
+map <leader>. :action Forward<CR>
