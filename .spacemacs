@@ -31,6 +31,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     csv
      vimscript
      html
      windows-scripts
@@ -340,11 +341,20 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (setenv "WORKON_HOME" "/home/will/anaconda3/envs")
   (require 'anaconda-mode)
-  (add-to-list 'python-shell-extra-pythonpaths
-               "/home/will/SW/tools/python/experiments/requirements_management")
+;;  (add-to-list 'python-shell-extra-pythonpaths
+;;               "/home/will/rppl_git/e2e")
   (require 'all-the-icons)
   (setq neo-theme 'icons)
-  (setq org-default-notes-file  "/home/will/gtd.org")
+;;  (setq org-default-notes-file  "/home/will/gtd.org")
+  (require 'ob-python)
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '(
+     (python . t)
+     (emacs-lisp . t)
+     )
+   )
+
   )
 
 
